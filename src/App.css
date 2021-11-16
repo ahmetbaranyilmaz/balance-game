@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #131417;
+}
+
+.balancingTriangle {
+  width: 0px;
+  height: 0px;
+  border-left: 66px solid transparent;
+  border-right: 66px solid transparent;
+  border-bottom: 100px solid #23f56f;
+  position: absolute;
+  left: calc(50% - 66px);
+  bottom: 200px;
+}
+
+.stage {
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%, -50%) scale(0.5);
+  background: #1e1f26;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.tilt {
+  transform-origin: 50% 5px;
+  position: absolute;
+  bottom: 300px;
+}
+
+.ground {
+  background: #5a5f73;
+  width: 1000px;
+  height: 10px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  backdrop-filter: drop-shadow(2px 0px 4px black);
+  font-size: 24pt;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+
+.tilt .boxes .box {
+  top: -30px !important;
+}
+
+.triangle {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.circle {
+  clip-path: circle(50%);
+}
